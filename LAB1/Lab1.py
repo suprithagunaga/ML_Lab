@@ -1,4 +1,3 @@
-
 import pandas as pd 
 import numpy as np 
 import seaborn as sns 
@@ -8,7 +7,6 @@ data=fetch_california_housing(as_frame=True)
 housing_df=data.frame 
 numerical_features=housing_df.select_dtypes(include=[np.number])
 numerical_features.head()
-
 plt.figure(figsize=(15,10))
 for i,feature in enumerate(numerical_features.columns):
     plt.subplot(3,3,i+1)
@@ -16,7 +14,6 @@ for i,feature in enumerate(numerical_features.columns):
     plt.title(f'Histogram of {feature}')
 plt.tight_layout()
 plt.show()
-
 plt.figure(figsize=(15,10))
 for i,feature in enumerate(numerical_features.columns):
         plt.subplot(3,3,i+1)
@@ -24,7 +21,6 @@ for i,feature in enumerate(numerical_features.columns):
         plt.title(f'Box Plot of {feature}')
 plt.tight_layout()
 plt.show()
-
 print("Description of Outliers")
 outliers_summary={}
 for feature in numerical_features.columns:
